@@ -6,7 +6,7 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         var url = location.hash;
         var id = url.split("/").pop();
 
-        self.actor = ko.observable(null);
+        self.actor = ko.observableArray(null);
         var actorUri = 'http://192.168.160.39/api/Actors/';
         self.error = ko.observable();
         //--- Funções internas
