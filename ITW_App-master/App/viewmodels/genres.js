@@ -2,7 +2,7 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
     //----------------------------------------------------------------------------------------------------------
  var ctor = function(){
         var self = this;
-        var searchGenressUri = 'http://192.168.160.39/api/Genres/Search/';
+        var searchGenresUri = 'http://192.168.160.39/api/Genres/Search/';
         var genresUri = 'http://192.168.160.39/api/Genres';
         var genresCountUri = 'http://192.168.160.39/api/Genres/Count';
         self.searchText = ko.observable("");
