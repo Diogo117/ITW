@@ -49,7 +49,7 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
             });
         };
         //---- Chamada inicial
-        getAllCountries();
+        getAllMovies();
 
     };
  return ctor;

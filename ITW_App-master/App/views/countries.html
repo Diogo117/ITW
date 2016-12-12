@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h2>CountriesService - <small data-bind="visible: (directorsCount() > 0)"><i class="fa fa-film"></i> Countries List [<span data-bind="text: countriesCount"></span> ]</small></h2>
+    <h2>CountriesService - <small data-bind="visible: (countriesCount() > 0)"><i class="fa fa-film"></i> Countries List [<span data-bind="text: countriesCount"></span> ]</small></h2>
 </div>
 <div class="container">
     <div class="row">
@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-2">
             <button class="btn btn-default" id="searchBtn" data-bind="click: searchCountries, disable : searchTextGood"><i class="fa fa-search"></i></button>
-            <button class="btn btn-default" id="clearSearchBtn" data-bind="click : cleaCountries"><i class="fa fa-trash-o"></i></button>
+            <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearCountries"><i class="fa fa-trash-o"></i></button>
         </div>
     </div>
     <hr />

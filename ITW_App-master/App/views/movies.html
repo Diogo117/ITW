@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h2>MoviesService - <small data-bind="visible: (directorsCount() > 0)"><i class="fa fa-film"></i> Movies List [<span data-bind="text: moviesCount"></span> ]</small></h2>
+    <h2>MoviesService - <small data-bind="visible: (moviesCount() > 0)"><i class="fa fa-film"></i> Movies List [<span data-bind="text: moviesCount"></span> ]</small></h2>
 </div>
 <div class="container">
     <div class="row">
@@ -17,7 +17,7 @@
     <hr />
     <div class="row" data-bind="foreach: movies">
         <div class="col-md-4">
-            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : '/MovieDetails/'+movieID}, text: movieName"></a></div>
+            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : '/MovieDetails/'+movieID}, text: movie_title"></a></div>
         </div>
     </div>
     <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
