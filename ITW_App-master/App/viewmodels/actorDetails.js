@@ -29,7 +29,11 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         getactor = function () {
             console.log('CALL: getActor...')
             ajaxHelper(actorUri + id, 'GET').done(function (data) {
+                if (data[0].photo === "/images/nophoto.png"){
+                    data[0].photo = "http://br.seaicons.com/wp-content/uploads/2016/08/Users-User-Male-2-icon.png";
+                }
                 self.actor(data);
+
             });
         };
         //---- Chamada inicial
