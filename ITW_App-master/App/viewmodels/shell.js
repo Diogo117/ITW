@@ -10,7 +10,7 @@ define(['plugins/router', 'durandal/app'], function (router, app) {
                 { route: 'countries', moduleId: 'viewmodels/countries', nav: true, menu : '<i class="fa fa-fax"></i>' },
                 { route: 'movies', moduleId: 'viewmodels/movies', nav: true, menu : '<i class="fa fa-university"></i>' },
                 { route: 'genres', moduleId: 'viewmodels/genres', nav: true, menu : '<i class="fa fa-cc"></i>' },
-                { route: 'actorDetails(/:actorID)', moduleId: 'viewmodels/actorDetails', nav: true, menu : '<i class="fa fa-cc"></i>', hash: "#actorDetails"}
+                { route: 'actorDetails(/:actorID)', moduleId: 'viewmodels/actorDetails', nav: false, menu : '<i class="fa fa-cc"></i>', hash: "#actorDetails"}
             ]).buildNavigationModel();
 
             return router.activate();

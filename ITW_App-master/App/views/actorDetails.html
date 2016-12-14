@@ -2,44 +2,48 @@
     <h2>ActorDetail</h2>
 </div>
 <div class="container">
-      <div class="row" data-bind="foreach: actor">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-md-offset-2">
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">actor Name:</span>
-                     <h2 data-bind="text: actorName"> </h2>
-                </div>
+        <div class="row profile" data-bind="foreach: actor">
+		  <div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					 <img width="300px" height="400px" data-bind="attr: { src : photo}" alt="http://br.seaicons.com/wp-content/uploads/2016/08/Users-User-Male-2-icon.png" class="col-lg-push-2"></img>
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						 <h2 data-bind="text: actorName"> </h2>
+					</div>
+                    <hr>
+					<div class="profile-usertitle-job">
+                        <img width="30px" height="30px" src="http://ergonomicsindesign.com/wp-content/uploads/Facebook_like_thumb.png"></img><h4 data-bind="text: actorFacebookLikes"></h4>
+                    <h2></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+			   <div>
+                    <h2 class="profile-title">Movies</h2>
+
+                   <table class="table table-hover">
+                       <thead>
+                          <tr> <th></th><th>Movie Title</th><th>Year</th><th>IMDB Score</th><th>Link</th></tr>
+                      </thead>
+                      <tbody data-bind="foreach: actor_movies">
+                          <tr>
+                               <td><i class="fa fa-film"></i></td>
+                               <td><a data-bind="attr: { href : './index.html#MovieDetails/'+movieID}, text: movie_title"></a></td>
+                               <td data-bind="text: title_year"></td>
+                              <td data-bind="text: imdb_score"></td>
+                              <td><a data-bind=" attr: { href : movie_imdb_link},text: movie_imdb_link"></a></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
             </div>
-
-             <div class=" col-lg-6col-md-6 col-md-offset-2">
-                <img width="300px" height="400px" data-bind="attr: { src : photo}"></img>
-            </div>
-
-            <div class=" col-lg-12 col-md-12 col-md-offset-2">
-                <div class="col-lg-1 col-md-1">
-                  <img width="30px" height="30px" src="http://ergonomicsindesign.com/wp-content/uploads/Facebook_like_thumb.png"></img>
-                </div>
-                <div class=" col-lg-1 col-md-1"><h4 data-bind="text: actorFacebookLikes"></h4></div>
-            </div>
-
-        </div>
-        <hr />
-
-          <div>
-              <table class="table table-hover">
-                  <thead>
-                      <tr> <th></th><th>Movie Title</th><th>Year</th><th>IMDB Score</th><th>Link</th></tr>
-                  </thead>
-                  <tbody data-bind="foreach: actor_movies">
-                      <tr>
-                           <td><i class="fa fa-film"></i></td>
-                           <td><a data-bind="attr: { href : './index.html#MovieDetails/'+movieID}, text: movie_title"></a></td>
-                           <td data-bind="text: title_year"></td>
-                          <td data-bind="text: imdb_score"></td>
-                          <td><a data-bind=" attr: { href : movie_imdb_link},text: movie_imdb_link"></a></td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-    </div>
+		</div>
+	</div>
 </div>
