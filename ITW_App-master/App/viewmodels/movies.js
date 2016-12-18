@@ -5,6 +5,8 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         var searchMoviesUri = 'http://192.168.160.39/api/Movies/Search/';
         var moviesUri = 'http://192.168.160.39/api/Movies';
         var moviesCountUri = 'http://192.168.160.39/api/Movies/Count';
+        var moviesBudgetUri = 'http://192.168.160.39/api/Movies/Budget';
+        var moviesGrossUri = 'http://192.168.160.39/api/Movies/Gross';
         self.searchText = ko.observable("");
         self.movies = ko.observableArray();
         self.moviesCount = ko.observable(null);
@@ -41,6 +43,20 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         clearMovies = function () {
             getAllMovies();
             self.searchText("");
+        };
+
+        getBudget = function () {
+            console.log('CALL: searchMovies/Budget...')
+            ajaxHelper(moviesBudgetUri, 'GET').done(function (data) {
+                self.movies(data);
+            });
+        };
+
+        getGross = function () {
+            console.log('CALL: searchMovies/Gross...')
+            ajaxHelper(moviesGrossUri, 'GET').done(function (data) {
+                self.movies(data);
+            });
         };
         searchMovies = function () {
             console.log('CALL: searchMovies...')
