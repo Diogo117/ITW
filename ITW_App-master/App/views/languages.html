@@ -1,24 +1,26 @@
 <div class="page-header">
-    <h2>LanguageService - <small data-bind="visible: (languagesCount() > 0)"><i class="fa fa-film"></i> Languages List [<span data-bind="text: languagesCount"></span> ]</small></h2>
+    <h2 class="titulo">Languages - <small data-bind="visible: (languagesCount() > 0)"><i class="fa fa-sort-alpha-asc"></i> Languages List [<span data-bind="text: languagesCount"></span> ]</small></h2>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-2">
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">language Name:</span>
-                <input type="text" id="languageTitle" class="form-control" data-bind="value:searchText" aria-describedby="basic-addon1" placeholder="language title" />
+    <div class="white">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">language Name:</span>
+                    <input type="text" id="languageTitle" class="form-control" data-bind="value:searchText" aria-describedby="basic-addon1" placeholder="language title" />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-default" id="searchBtn" data-bind="click: searchLanguage, disable : searchTextGood"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearLanguage" title="Reset"><i class="fa fa-trash-o"></i></button>
             </div>
         </div>
-        <div class="col-md-2">
-            <button class="btn btn-default" id="searchBtn" data-bind="click: searchLanguage, disable : searchTextGood"><i class="fa fa-search"></i></button>
-            <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearLanguage" title="Reset"><i class="fa fa-trash-o"></i></button>
+        <hr />
+        <div class="row" data-bind="foreach: languages">
+            <div class="col-md-4">
+                <div><img data-bind="attr: { src : './Content/images/' + languageName + '.png' }"></img> <a data-bind="attr: { href : './index.html#languageDetails/'+languageID}, text: languageName"></a></div>
+            </div>
         </div>
+        <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
     </div>
-    <hr />
-    <div class="row" data-bind="foreach: languages">
-        <div class="col-md-4">
-            <div><img data-bind="attr: { src : './Content/images/' + languageName + '.png' }"></img> <a data-bind="attr: { href : './index.html#languageDetails/'+languageID}, text: languageName"></a></div>
-        </div>
-    </div>
-    <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
 </div>

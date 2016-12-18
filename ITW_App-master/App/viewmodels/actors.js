@@ -59,6 +59,12 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         };
         //---- Chamada inicial
         getAllActors();
+     document.body.style.backgroundImage = "url('http://netdna.copyblogger.com/images/improv-theatre.jpg')";
+     document.body.style.backgroundPosition = "center";
+     document.body.style.backgroundRepeat = "no-repeat";
+     document.body.style.backgroundSize = "cover";
+
+
 
     };
  return ctor;

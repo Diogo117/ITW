@@ -1,24 +1,26 @@
 <div class="page-header">
-    <h2>GenresService - <small data-bind="visible: (genresCount() > 0)"><i class="fa fa-film"></i> Genres List [<span data-bind="text: genresCount"></span> ]</small></h2>
+    <h2 class="titulo">Genres - <small data-bind="visible: (genresCount() > 0)"><i class="fa fa-cc"></i> Genres List [<span data-bind="text: genresCount"></span> ]</small></h2>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-2">
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">Genre Name:</span>
-                <input type="text" id="genreTitle" class="form-control" data-bind="value:searchText" aria-describedby="basic-addon1" placeholder="Genre title" />
+    <div class="white1">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Genre Name:</span>
+                    <input type="text" id="genreTitle" class="form-control" data-bind="value:searchText" aria-describedby="basic-addon1" placeholder="Genre title" />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-default" id="searchBtn" data-bind="click: searchGenres, disable : searchTextGood"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearGenres" title="Reset"><i class="fa fa-trash-o"></i></button>
             </div>
         </div>
-        <div class="col-md-2">
-            <button class="btn btn-default" id="searchBtn" data-bind="click: searchGenres, disable : searchTextGood"><i class="fa fa-search"></i></button>
-            <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearGenres" title="Reset"><i class="fa fa-trash-o"></i></button>
+        <hr />
+        <div class="row" data-bind="foreach: genres">
+            <div class="col-md-4">
+                <div><i class="fa fa-ticket"></i> <a data-bind="attr: { href : './index.html#genreDetails/'+genreID}, text: genreName"></a></div>
+            </div>
         </div>
+        <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
     </div>
-    <hr />
-    <div class="row" data-bind="foreach: genres">
-        <div class="col-md-4">
-            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : './index.html#genreDetails/'+genreID}, text: genreName"></a></div>
-        </div>
-    </div>
-    <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
 </div>

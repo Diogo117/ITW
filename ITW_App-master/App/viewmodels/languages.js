@@ -50,6 +50,10 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         };
         //---- Chamada inicial
         getAllLanguages();
+     document.body.style.backgroundImage = "url('https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/1/9/1420814719448/9272a86a-55b1-45b3-a84e-b8247ba98db4-1020x612.jpeg?w=300&q=55&auto=format&usm=12&fit=max&s=cbc2aa5a87a5418d46c16d4586a7f6e2')";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
 
     };
  return ctor;

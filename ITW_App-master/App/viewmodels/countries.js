@@ -50,6 +50,10 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         };
         //---- Chamada inicial
         getAllCountries();
+     document.body.style.backgroundImage = "url('http://wallpapercave.com/wp/UwjJZ04.jpg')";
+     document.body.style.backgroundPosition = "center";
+     document.body.style.backgroundSize = "cover";
+     document.body.style.backgroundRepeat = "no-repeat";
 
     };
  return ctor;

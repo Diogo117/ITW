@@ -66,6 +66,10 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         };
         //---- Chamada inicial
         getAllMovies();
+     document.body.style.backgroundImage = "url('http://wallpaper-gallery.net/images/wallpaper-movie/wallpaper-movie-21.jpg')";
+     document.body.style.backgroundPosition = "center";
+     document.body.style.backgroundSize = "cover";
+     document.body.style.backgroundRepeat = "no-repeat";
 
     };
  return ctor;

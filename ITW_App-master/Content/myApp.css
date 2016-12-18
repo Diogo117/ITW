@@ -178,3 +178,16 @@ body {
 .carousel-caption .btn {
   margin-top: 10px;
 }
+.white {
+    padding: 20px;
+  background: #fff;
+  min-height: 500px;
+}
+.white1{
+    padding: 20px;
+  background: #fff;
+  min-height: 350px;
+}
+.titulo {
+    color: white;
+}

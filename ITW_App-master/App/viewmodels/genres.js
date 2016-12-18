@@ -50,6 +50,10 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         };
         //---- Chamada inicial
         getAllGenres();
+     document.body.style.backgroundImage = "url('http://previews.123rf.com/images/kentoh/kentoh1006/kentoh100600672/7207407-Movie-Poster-of-Film-Genres-Vintage-Background-Stock-Photo-movie-cinema-movies.jpg')";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
 
     };
  return ctor;

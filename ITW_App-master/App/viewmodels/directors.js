@@ -59,7 +59,10 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         };
         //---- Chamada inicial
         getAllDirectors();
-
+     document.body.style.backgroundImage = "url('http://orig13.deviantart.net/ee13/f/2015/032/7/3/director_s_chair_by_jeorgebgeorge-d8gdf8h.jpg')";
+     document.body.style.backgroundPosition = "center";
+     document.body.style.backgroundSize = "cover";
+     document.body.style.backgroundRepeat = "no-repeat";
     };
  return ctor;
 });

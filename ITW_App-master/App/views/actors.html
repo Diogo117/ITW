@@ -1,25 +1,27 @@
 <div class="page-header">
-    <h2>ActorsService - <small data-bind="visible: (actorsCount() > 0)"><i class="fa fa-film"></i> Actors List [<span data-bind="text: actorsCount"></span> ]</small></h2>
+    <h2 class="titulo">Actors - <small data-bind="visible: (actorsCount() > 0)"><i class="fa fa-users"></i> Actors List [<span data-bind="text: actorsCount"></span> ]</small></h2>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-2">
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">Actor Name:</span>
-                <input type="text" id="actorTitle" class="form-control" data-bind="value:searchText" aria-describedby="basic-addon1" placeholder="Actor title" />
+    <div class="white">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Actor Name:</span>
+                    <input type="text" id="actorTitle" class="form-control" data-bind="value:searchText" aria-describedby="basic-addon1" placeholder="Actor title" />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-default" id="searchBtn" data-bind="click: searchActors, disable : searchTextGood"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearActors" title="Reset"><i class="fa fa-trash-o"></i></button>
+                <button class="btn btn-default" id="FacebookLikesBtn" data-bind="click : getLikesActors" title="Based on Facebook likes"><i class="fa fa-facebook-official"></i></button>
             </div>
         </div>
-        <div class="col-md-2">
-            <button class="btn btn-default" id="searchBtn" data-bind="click: searchActors, disable : searchTextGood"><i class="fa fa-search"></i></button>
-            <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearActors" title="Reset"><i class="fa fa-trash-o"></i></button>
-            <button class="btn btn-default" id="FacebookLikesBtn" data-bind="click : getLikesActors" title="Based on Facebook likes"><i class="fa fa-facebook-official"></i></button>
+        <hr />
+        <div class="row" data-bind="foreach: actors">
+            <div class="col-md-4">
+                <div><i class="fa fa-star"></i> <a data-bind="attr: { href : './index.html#actorDetails/'+actorID}, text: actorName"></a></div>
+            </div>
         </div>
+        <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
     </div>
-    <hr />
-    <div class="row" data-bind="foreach: actors">
-        <div class="col-md-4">
-            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : './index.html#actorDetails/'+actorID}, text: actorName"></a></div>
-        </div>
-    </div>
-    <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
 </div>
