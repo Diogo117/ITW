@@ -1,7 +1,23 @@
 <section>
-    <div class=" page-header"><h3 data-bind="text:displayName"></h3></div>
-    <p data-bind="text:description"></p>
-    <ul data-bind="foreach: features">
-        <li data-bind="text:$data"></li>
-    </ul>
+    <!-- carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-interval="10000" data-pause=null>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src=".\Content\images\filme1.jpg">
+        </div>
+        <div class="item">
+          <img src=".\Content\images\filme2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src=".\Content\images\filme3.jpg" alt="">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+    </div><!-- /.carousel -->
+	<div class="container">
+		<h2>About us</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper est feugiat ipsum imperdiet luctus. Donec aliquet vehicula feugiat. Fusce quis erat condimentum, venenatis nunc vitae, hendrerit ligula. Nunc eu magna ligula. Nulla ac auctor dui. Duis mollis tortor eget erat efficitur consequat. Aliquam nibh nibh, viverra ut elementum ac, feugiat sed quam. In finibus feugiat nisl, quis maximus enim aliquet sodales. Ut porta urna sapien, id ultricies nisl ornare ac. Maecenas finibus purus at tellus fermentum pretium. Quisque sit amet auctor felis, at dapibus lacus. Praesent tempor pretium tortor id viverra. Integer interdum pellentesque sodales. Mauris odio dolor, vestibulum sit amet eros vel, imperdiet lacinia tortor. Ut tincidunt lacus eu mattis hendrerit.</p>
+	</div>
 </section>
