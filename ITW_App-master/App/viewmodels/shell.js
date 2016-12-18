@@ -14,6 +14,7 @@ define(['plugins/router', 'durandal/app'], function (router, app) {
                 { route: 'countryDetails(/:countryID)', moduleId: 'viewmodels/countryDetails', nav: false, menu : '<i class="fa fa-sort-alpha-asc"></i>' },
                 { route: 'genreDetails(/:genreID)', moduleId: 'viewmodels/genreDetails', nav: false, menu : '<i class="fa fa-sort-alpha-asc"></i>' },
                 { route: 'actorDetails(/:actorID)', moduleId: 'viewmodels/actorDetails', nav: false, menu : '<i class="fa fa-cc"></i>', hash: "#actorDetails"},
+                { route: 'directorDetails(/:directorID)', moduleId: 'viewmodels/directorDetails', nav: false, menu : '<i class="fa fa-cc"></i>', hash: "#directorDetails"},
                 { route: 'movieDetails(/:movieID)', moduleId: 'viewmodels/movieDetails', nav: false, menu : '<i class="fa fa-cc"></i>', hash: "#movieDetails"}
             ]).buildNavigationModel();
 
