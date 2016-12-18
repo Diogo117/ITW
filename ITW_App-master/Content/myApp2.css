@@ -1,0 +1,44 @@
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 780px;
+}
+
+
+.nav-tabs {
+  text-align: center;
+  border-bottom: 0px;
+}
+
+.nav-tabs>li{
+  float: none;
+  display: inline-block;
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.nav-tabs>li>a{
+  background-color: #fff;
+  padding: 15px 40px;
+  color: #777;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-top: 1px solid rgba(221, 221, 221, 0.56);
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover{
+  background-color: #1a8cff;
+  color: #fff;
+}
+
+.low-border{
+    border: 3px solid;
+}
+
+.bigger{
+    font-size: 130%;
+
+}

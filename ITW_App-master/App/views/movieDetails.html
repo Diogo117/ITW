@@ -1,95 +1,162 @@
 <div class="container">
-        <div class="row profile" data-bind="foreach: movie">
-		  <div class="col-md-3">
-			<div class="profile-sidebar">
-				<!-- SIDEBAR USERPIC -->
-				<div class="profile-userpic">
-					 <img width="300px" height="400px" data-bind="attr: { src : poster}"class="col-lg-push-2"></img>
-				</div>
-				<!-- END SIDEBAR USERPIC -->
-				<!-- SIDEBAR USER TITLE -->
-				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
-						 <h2 data-bind="text: movie_title"> </h2>
-					</div>
+    <div class="row profile" data-bind="foreach: movie">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <img width="300px" height="400px" data-bind="attr: { src : poster}"class="col-lg-push-2"></img>
+                </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        <h2 data-bind="text: movie_title"> </h2>
+                    </div>
                     <hr>
-					<div class="profile-usertitle-job">
-                        <img width="30px" height="30px" src="http://ergonomicsindesign.com/wp-content/uploads/Facebook_like_thumb.png"></img><h4 data-bind="text: movie_facebook_likes"></h4>
-                    <h2></h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-9">
-            <div class="profile-content">
-			   <div>
-                   <div>
-                       <div class="col-lg-12">
-                           <div class="col-lg-2"> <h4>Year: </h4> </div>  <div class="col-lg-2"> <h4 data-bind="text: title_year"></h4> </div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2"> <h4>link: </h4> </div>  <div class="col-lg-2">  <a data-bind="attr: { href : movie_imdb_link} "> IMDB</a></div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2"><h4>color: </h4> </div>  <div class="col-lg-2">  <h4 data-bind="text: color"></h4> </div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2"> <h4>aspect ratio: </h4> </div>  <div class="col-lg-2"><h4 data-bind="text: aspect_ratio"></h4> </div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2"> <h4>imdb score: </h4> </div>  <div class="col-lg-2">    <h4 data-bind="text: content_rating"></h4></div>
-                       </div>
-                    <div class="col-lg-12">
-                           <div class="col-lg-2">   <h4>duration: </h4>  </div>  <div class="col-lg-2">  <h4 data-bind="text: duration"></h4></div>
-                       </div>
-                    <div class="col-lg-12">
-                           <div class="col-lg-2"> <h4>gross: </h4> </div>  <div class="col-lg-2"> <h4 data-bind="text: gross"></h4> </div>
-                       </div>
-                    <div class="col-lg-12">
-                           <div class="col-lg-2">  <h4>crits: </h4> </div>  <div class="col-lg-2"> <h4 data-bind="text: num_critic_for_reviews"></h4> </div>
-                       </div>
-                    <div class="col-lg-12">
-                           <div class="col-lg-2">  <h4>voted: </h4> </div>  <div class="col-lg-2">   <h4 data-bind="text: num_voted_users"></h4> </div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2">   <h4>cast face: </h4> </div>  <div class="col-lg-2"> <h4 data-bind="text: cast_total_facebook_likes"></h4> </div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2">     <h4>keywords: </h4> </div>  <div class="col-lg-2">   <h4 data-bind="text: plot_keywords"></h4> </div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2">   <h4>user reviews: </h4>  </div>  <div class="col-lg-2">  <h4 data-bind="text: num_user_for_reviews"></h4> </div>
-                       </div>
-                        <div class="col-lg-12">
-                           <div class="col-lg-2">  <h4>budget: </h4> </div>  <div class="col-lg-2">   <h4 data-bind="text: budget"></h4> </div>
-                       </div>
+                    <div>
+                        <ul class="nav nav-tabs alt">
+                            <li class="active"><a href="#first-tab" data-toggle="tab" aria-expanded="true">Details</a></li>
+                            <li class=""><a href="#second-tab" data-toggle="tab" aria-expanded="false">Actors</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-lg-9">
+            <div class="profile-content tab-content">
+                <div class="tab-pane fade active in" id="first-tab">
+                     <table class="table table-striped">
+                        <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Year: </div>
+                                 <div data-bind="text: title_year"></div>
+                             </td>
+                         </tr>
+                          <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Link: </div>
+                                 <div> <a data-bind="attr: { href : movie_imdb_link} "> IMDB</a></div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Color: </div>
+                                 <div data-bind="text: color"></div>
+                             </td>
+                         </tr>
 
 
+                           <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Aspect ratio:</div>
+                                 <div data-bind="text: aspect_ratio"></div>
+                             </td>
+                         </tr>
+                           <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Rating: </div>
+                                 <div data-bind="text: content_rating"></div>
+                             </td>
+                         </tr>
+                           <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Imdb score: </div>
+                                 <div data-bind="text: imdb_score"></div>
+                             </td>
+                         </tr>
+                          <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Duration: </div>
+                                 <div data-bind="text: duration + ' minutes'"></div>
+                             </td>
+                         </tr>
+                          <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Budget: </div>
+                                 <div class="col-lg-2 col-md-2 col-xs-2" data-bind="text: budget"></div>   $
+                             </td>
+                        </tr>
+
+                          <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Gross: </div>
+                                    <div class="col-lg-2 col-md-2 col-xs-2" data-bind="text: gross"></div>  $
+                             </td>
+                         </tr>
+                          <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Reviews: </div>
+                                 <div data-bind="text: num_critic_for_reviews + ' critic and ' + num_user_for_reviews + ' user'"></div>
+                             </td>
+                         </tr>
+                          <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3 ">Facebook: </div>
+                                 <div  class="col-lg-1 col-md-2 col-xs-2" data-bind="text: movie_facebook_likes"></div> <img width="20px" height="20px" src="http://ergonomicsindesign.com/wp-content/uploads/Facebook_like_thumb.png" alt="Likes" ></img>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Cast Facebook Likes: </div>
+                                <div  class="col-lg-1 col-md-2 col-xs-2" data-bind="text: cast_total_facebook_likes"></div> <img width="20px" height="20px" src="http://ergonomicsindesign.com/wp-content/uploads/Facebook_like_thumb.png" alt="Likes" ></img>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Keywords: </div>
+                                 <div data-bind="text: plot_keywords"></div>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Voted Users: </div>
+                                 <div data-bind="text: num_voted_users"></div>
+                             </td>
+                         </tr>
+                        <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3"> Genres: </div>
+                                 <div data-bind="foreach: genres"> <a data-bind="attr: { href : './index.html#genreDetails/'+genreID}, text: genreName"></a> </div>
+                             </td>
+                         </tr>
+                        <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Director: </div>
+                                 <div> <a data-bind="attr: { href : './index.html#directorDetails/'+directorID}, text: directorName"></a></div>
+                             </td>
+                         </tr>
+                        <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Country: </div>
+                                 <div> <img data-bind="attr: { src : './Content/images/' + countryName + '.png' }" alt="NO Photo"></img>    <a data-bind="attr: { href : './index.html#countryDetails/'+countryID}, text: countryName"></a></div>
+                             </td>
+                         </tr>
+                        <tr>
+                             <td class="bigger">
+                                 <div class="col-lg-3 col-md-3 col-xs-3">Language: </div>
+                                 <div><img data-bind="attr: { src : './Content/images/' + languageName + '.png' }" alt="NO Photo"></img>    <a data-bind="attr: { href : './index.html#languageDetails/'+languageID}, text: languageName"></a></div>
+                             </td>
+                         </tr>
 
 
+                    </table>
+               </div>
 
+                <div class="tab-pane fade" id="second-tab">
 
-
-
-
-
-
-
-                        <a data-bind="attr: { href : './index.html#directorDetails/'+directorID}, text: directorName"></a>
-                        <a data-bind="attr: { href : './index.html#countryDetails/'+countryID}, text: countryName"></a>
-                        <a data-bind="attr: { href : './index.html#languageDetails/'+languageID}, text: languageName"></a>
-					</div>
-                    <h2 class="profile-title">Actors</h2>
+                   <h2 class="profile-title">Actors</h2>
 
                    <table class="table table-hover">
-                      <tbody data-bind="foreach: movie_actors">
-                          <tr>
-                               <td><i class="fa fa-film"></i></td>
-                               <td><a data-bind="attr: { href : './index.html#actorDetails/'+actorID}, text: actorName"></a></td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
+                       <tbody data-bind="foreach: movie_actors">
+                           <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="text-right"><img width="30px" height="30px"  src="http://br.seaicons.com/wp-content/uploads/2016/08/Users-User-Male-2-icon.png"></img></td>
+                                <td class="bigger"><a data-bind="attr: { href : './index.html#actorDetails/'+actorID}, text: actorName"></a></td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </div>
             </div>
 		</div>
 	</div>
