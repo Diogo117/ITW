@@ -17,7 +17,7 @@
     <hr />
     <div class="row" data-bind="foreach: languages">
         <div class="col-md-4">
-            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : './index.html#languageDetails/'+languageID}, text: languageName"></a></div>
+            <div><img data-bind="attr: { src : './Content/images/' + languageName + '.png' }"></img> <a data-bind="attr: { href : './index.html#languageDetails/'+languageID}, text: languageName"></a></div>
         </div>
     </div>
     <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
