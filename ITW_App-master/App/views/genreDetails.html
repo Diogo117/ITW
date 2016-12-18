@@ -1,0 +1,28 @@
+<div class="container">
+        <div class="row profile" data-bind="foreach: genre">
+		<div class="col-md-9">
+            <div class="profile-content">
+			   <div>
+                    <h1 class="profile-title" data-bind="text: genreName"></h1>
+                    <hr>
+                    <h2 class="profile-title">Movies</h2>
+
+                   <table class="table table-hover">
+                       <thead>
+                          <tr> <th></th><th>Movie Title</th><th>Year</th><th>IMDB Score</th><th>Link</th></tr>
+                      </thead>
+                      <tbody data-bind="foreach: movies">
+                          <tr>
+                               <td><img data-bind="attr: { src : poster}" alt="noPhoto" height="40px" width="50px"></img></td>
+                               <td><a data-bind="attr: { href : './index.html#MovieDetails/'+movieID}, text: movie_title"></a></td>
+                               <td data-bind="text: title_year"></td>
+                              <td data-bind="text: imdb_score"></td>
+                              <td><a data-bind=" attr: { href : movie_imdb_link}">IMDB</a></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+		</div>
+	</div>
+</div>
