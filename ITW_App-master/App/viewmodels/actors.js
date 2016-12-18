@@ -5,6 +5,7 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
         var searchActorsUri = 'http://192.168.160.39/api/Actors/Search/';
         var actorsUri = 'http://192.168.160.39/api/Actors';
         var actorsCountUri = 'http://192.168.160.39/api/Actors/Count';
+        var actorsLikesUri = 'http://192.168.160.39/api/Actors/Likes';
         self.searchText = ko.observable("");
         self.actors = ko.observableArray();
         self.actorsCount = ko.observable(null);
@@ -42,6 +43,14 @@ define(['plugins/http', 'durandal/app', 'knockout'], function (http, app, ko) {
             getAllActors();
             self.searchText("");
         };
+
+        getLikesActors = function () {
+            console.log('CALL: searchActors/Likes...')
+            ajaxHelper(actorsLikesUri, 'GET').done(function (data) {
+                self.actors(data);
+            });
+        };
+
         searchActors = function () {
             console.log('CALL: searchActors...')
             ajaxHelper(searchActorsUri + self.searchText(), 'GET').done(function (data) {
