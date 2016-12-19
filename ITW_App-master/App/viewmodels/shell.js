@@ -3,7 +3,7 @@ define(['plugins/router', 'durandal/app'], function (router, app) {
         router: router,
         activate: function () {
             router.map([
-                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true, menu : '<i class="fa fa-home"></i>' },
+                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: false, menu : '<i class="fa fa-home"></i>' },
                 { route: 'directors', moduleId: 'viewmodels/directors', nav: true, menu : '<i class="fa fa-bullhorn"></i>' },
                 { route: 'actors', moduleId: 'viewmodels/actors', nav: true, menu : '<i class="fa fa-users"></i>' },
                 { route: 'countries', moduleId: 'viewmodels/countries', nav: true, menu : '<i class="fa fa-map"></i>' },
